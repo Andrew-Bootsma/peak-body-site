@@ -764,6 +764,18 @@ a:hover {
   min-height: 380px;
 }
 
+.map-embed {
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-height: 380px;
+  box-shadow: 0 4px 18px rgba(18, 49, 79, 0.12);
+}
+.map-embed iframe {
+  display: block;
+  width: 100%;
+  min-height: 380px;
+}
+
 /* ---------- 10. CTA band ---------- */
 .cta-band {
   text-align: center;
