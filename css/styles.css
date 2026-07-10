@@ -471,6 +471,16 @@ a:hover {
   align-items: center;
 }
 
+/* Some .split text columns (e.g. naturopathic, with multiple rate
+   tables) run much taller than others. Give every .split photo a
+   shared fixed height instead of stretching to match its column —
+   object-fit: cover would otherwise upscale short images and blur
+   them — and top-align them so they sit flush with the section. */
+.split .photo {
+  height: 560px;
+  align-self: start;
+}
+
 .card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -871,6 +881,7 @@ a:hover {
   .split .photo,
   .split .img-placeholder {
     order: -1;
+    height: auto;
     max-height: 340px;
   }
   .footer-grid {
