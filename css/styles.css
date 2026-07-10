@@ -587,6 +587,28 @@ a:hover {
 .rates-note {
   font-size: 0.95rem;
 }
+.rates-subhead {
+  font-family: var(--font-display);
+  font-stretch: 125%;
+  color: var(--peak-blue-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin: 1.75rem 0 0;
+}
+.rates-subhead:first-of-type {
+  margin-top: 0;
+}
+.rates + .rates-subhead {
+  margin-top: 1.75rem;
+}
+.rates dd.price-note {
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: var(--summit-navy);
+  opacity: 0.75;
+}
 
 /* FAQ */
 .faq details {
