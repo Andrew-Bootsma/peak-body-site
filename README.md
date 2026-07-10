@@ -18,11 +18,22 @@ peak-body-site/
 └── images/logo.png     Client logo (transparent background)
 ```
 
-## The one-line booking switch
+## Booking links (three practitioners, three platforms — for now)
 
-Every booking button/link carries `data-book`. `js/main.js` points them all at
-`SITE_CONFIG.bookingUrl`. Set it once for ClinicSense now; change that same line
-when the clinic migrates to Jane.
+Every booking button/link carries `data-book`. `js/main.js` handles two cases:
+
+- Generic buttons (nav "Book Now", footer "Book online", homepage CTAs) have no
+  practitioner in context, so they route to `team.html#our-team` where the
+  visitor picks a practitioner and clicks that person's own booking link.
+- Practitioner-specific buttons (team.html cards, services.html "Book with
+  Dr. Burkitt") add `data-book-url="…"` pointing straight at that
+  practitioner's booking platform (ClinicSense for Bram, Jane App for Janelle
+  and Dr. Burkitt).
+
+`SITE_CONFIG.practitioners` in `js/main.js` is a reference list of the three
+current URLs. When the clinic centralizes booking onto one platform, replace
+this whole scheme with a single `SITE_CONFIG.bookingUrl` and drop the
+`data-book-url` overrides.
 
 ## Placeholder system
 
@@ -30,13 +41,12 @@ Anything wrapped in `<span class="todo">…</span>` is pending real information 
 renders with a gold dashed underline so nothing ships by accident. Find them all with
 a project-wide search for `class="todo"`. Current TODOs:
 
-- [ ] `SITE_CONFIG.bookingUrl` in `js/main.js` (ClinicSense URL)
 - [ ] Street address + postal code (footer on all pages, contact.html, JSON-LD in index.html)
 - [ ] Phone + email (footer on all pages, contact.html, first-visit.html FAQ, JSON-LD)
 - [ ] Hours (footer on all pages, contact.html)
 - [ ] RMT + ND rates (services.html)
 - [ ] Direct-billing wording (services.html, first-visit.html)
-- [ ] Real practitioner names/bios/headshots (team.html — two dummy cards are clearly marked)
+- [ ] Headshots for Bram, Janelle, and Dr. Burkitt (team.html — bios/booking links are real)
 - [ ] Careers email (team.html hiring panel)
 - [ ] Parking + accessibility details (contact.html)
 - [ ] Contact form endpoint (contact.html — wire to Formspree/Netlify Forms/backend)
@@ -56,7 +66,9 @@ to replace any of them.
 
 ## Launch-day switches
 
-1. Set the real booking URL in `js/main.js`.
+1. Booking URLs for all three practitioners are already live in `js/main.js` and
+   `team.html`. Add a fourth practitioner? Give their button `data-book-url="…"`
+   and add them to `SITE_CONFIG.practitioners` for reference.
 2. Change the ribbon text (all pages) from "Opening August 2026…" to whatever suits
    opening week — or delete the `<div class="ribbon">` entirely.
 3. Home hero: change the eyebrow from "Opening August 2026 in Oshawa" to

@@ -4,30 +4,48 @@
 
 /* --------------------------------------------------------------------------
    SITE CONFIG — the one-line changes.
-   Every "Book Now" button / booking link on the site carries data-book and
-   is pointed at bookingUrl below. When the clinic migrates from ClinicSense
-   to Jane, update this single line and the whole site follows.
+   We currently have three practitioners, each on their own booking platform
+   (no centralized booking yet). Generic "Book Now" links (no specific
+   practitioner in context) send people to the Our Team page so they can pick
+   a practitioner and use that person's booking link. Any link tagged with
+   data-book-url="..." goes straight to that practitioner's own booking page.
+   When the clinic centralizes booking onto one platform, replace this whole
+   block with a single bookingUrl and drop the per-practitioner overrides.
    -------------------------------------------------------------------------- */
 const SITE_CONFIG = {
-  bookingUrl: "#TODO-REPLACE-WITH-CLINICSENSE-BOOKING-URL",
+  practitioners: {
+    bram: "https://bramvanbommelrmt.clinicsense.com/book/",
+    janelle: "https://lotusmassagewellness.janeapp.com/",
+    rhiannon: "https://burkittnaturopathic.janeapp.com/#/staff_member/1",
+  },
+  defaultBookingUrl: "team.html#our-team",
 };
 
 document.addEventListener("DOMContentLoaded", () => {
   /* Booking links */
   const bookLinks = document.querySelectorAll("[data-book]");
   bookLinks.forEach((a) => {
-    a.href = SITE_CONFIG.bookingUrl;
-    a.target = "_blank";
-    a.rel = "noopener";
-    if (!a.getAttribute("aria-label")) {
-      a.setAttribute("aria-label", a.textContent.trim() + " (opens external booking site)");
+    const overrideUrl = a.getAttribute("data-book-url");
+    if (overrideUrl) {
+      a.href = overrideUrl;
+      a.target = "_blank";
+      a.rel = "noopener";
+      if (!a.getAttribute("aria-label")) {
+        a.setAttribute(
+          "aria-label",
+          a.textContent.trim() + " (opens external booking site)",
+        );
+      }
+    } else {
+      a.href = SITE_CONFIG.defaultBookingUrl;
+      if (!a.getAttribute("aria-label")) {
+        a.setAttribute(
+          "aria-label",
+          a.textContent.trim() + " (choose a practitioner to book)",
+        );
+      }
     }
   });
-  if (SITE_CONFIG.bookingUrl.startsWith("#TODO")) {
-    console.warn(
-      "[Peak Body] Booking URL not set yet — update SITE_CONFIG.bookingUrl in js/main.js"
-    );
-  }
 
   /* Mobile nav toggle */
   const toggle = document.querySelector(".nav-toggle");
