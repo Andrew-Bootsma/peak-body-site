@@ -16,10 +16,18 @@ peak-body-site/
 ├── css/styles.css      Full design system + all components
 ├── js/main.js          Booking-URL config, mobile nav, footer year
 └── images/
-    ├── PeakBody.svg              Full lockup + tagline (large/standalone placements)
-    ├── PeakBody-no-tagline.svg   Mark + wordmark, no tagline (site header)
-    └── logo.png                  Legacy raster logo, unused — kept for reference
+    ├── PeakBody.png              Full lockup + tagline (large/standalone placements)
+    └── PeakBody-no-tagline.png   Mark + wordmark, no tagline (site header)
 ```
+
+Both PeakBody PNGs are exported straight from the designer's master file (transparent,
+1800px wide — plenty of headroom for retina/@3x screens). An earlier pass tried
+recreating them as "recolorable SVGs" (a raster image piped through an SVG
+`<mask>`/`feColorMatrix` filter to fake vector scaling), but iOS Safari rasterizes
+SVG masks/filters at a fixed low resolution regardless of device pixel ratio — it
+looked fine on desktop but blurred badly on iPhone. Stick with flat PNGs for this
+logo unless a true path-based vector (from the designer's source file, e.g. AI/EPS/Figma)
+becomes available.
 
 ## Booking links (three practitioners, three platforms — for now)
 
