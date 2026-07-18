@@ -15,7 +15,10 @@ peak-body-site/
 ├── contact.html        Contact (form + map placeholder)
 ├── css/styles.css      Full design system + all components
 ├── js/main.js          Booking-URL config, mobile nav, footer year
-└── images/logo.png     Client logo (transparent background)
+└── images/
+    ├── PeakBody.svg              Full lockup + tagline (large/standalone placements)
+    ├── PeakBody-no-tagline.svg   Mark + wordmark, no tagline (site header)
+    └── logo.png                  Legacy raster logo, unused — kept for reference
 ```
 
 ## Booking links (three practitioners, three platforms — for now)
