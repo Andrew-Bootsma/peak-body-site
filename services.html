@@ -13,7 +13,7 @@
     />
     <link
       rel="icon"
-      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 52 L32 12 L56 52' fill='none' stroke='%2312314F' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 54 L32 34 L44 54' fill='none' stroke='%231E7FE0' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cpath d='M8 52 L32 12 L56 52' fill='none' stroke='%23152A52' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 54 L32 34 L44 54' fill='none' stroke='%23386FCB' stroke-width='7' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -79,7 +79,7 @@
           <path
             d="M110 282 L200 150 L290 282"
             fill="none"
-            stroke="rgba(30,127,224,0.35)"
+            stroke="rgba(56,111,203,0.45)"
             stroke-width="22"
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -91,8 +91,8 @@
           <p class="lead">
             Peak Body Performance brings multiple disciplines under one roof so
             your care can be coordinated instead of scattered. We're opening
-            with Registered Massage Therapy, Registered Psychotherapy, and
-            Naturopathic Medicine, and adding new services as we grow. If we
+            with Registered Massage Therapy and Naturopathic Medicine, and
+            adding new services as we grow. If we
             believe a different type of care would serve you better — inside our
             clinic or beyond it — we'll tell you, and we'll help you get there.
           </p>
@@ -168,7 +168,15 @@
         </div>
       </section>
 
-      <!-- REGISTERED PSYCHOTHERAPY -->
+      <!-- ==== TEMPORARILY HIDDEN: Registered Psychotherapy (moved to the
+           Growing with you panel below until launch). To relaunch: uncomment
+           this section, remove the psychotherapy bullet from Growing with you,
+           re-add it to the hero lead above, and re-alternate the section
+           backgrounds (this section has no bg class = bone, so restore
+           "section section~~white" on #naturopathic and plain "section" on
+           Growing with you; ~~ stands for a double hyphen, which is not
+           allowed inside an HTML comment). Also restore the card on
+           index.html.
       <section id="psychotherapy" class="section">
         <div class="container split">
           <div>
@@ -209,7 +217,7 @@
               >
             </div>
           </div>
-          <!-- Image: calm therapy/counselling setting (Pexels #7176026) -->
+          [Image: calm therapy/counselling setting (Pexels #7176026)]
           <img
             class="photo"
             src="https://images.pexels.com/photos/7176026/pexels-photo-7176026.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200"
@@ -218,9 +226,10 @@
           />
         </div>
       </section>
+      ==== END TEMPORARILY HIDDEN ==== -->
 
       <!-- NATUROPATHIC MEDICINE -->
-      <section id="naturopathic" class="section section--white">
+      <section id="naturopathic" class="section">
         <div class="container split">
           <div>
             <h2>Naturopathic Medicine</h2>
@@ -334,7 +343,7 @@
       </section>
 
       <!-- GROWING WITH YOU -->
-      <section class="section">
+      <section class="section section--white">
         <div class="container">
           <div class="panel--elevation">
             <h2>Growing with you</h2>
@@ -343,6 +352,11 @@
               clinic. Coming in the near future:
             </p>
             <ul class="peak-list">
+              <li>
+                <strong>Registered psychotherapy</strong> — confidential,
+                evidence-informed talk therapy, from stress and anxiety to sport
+                and performance psychology
+              </li>
               <li>
                 <strong>Chiropractic care</strong> — assessment, adjustment, and
                 rehabilitation for joint and spine health
@@ -396,7 +410,7 @@
             <path
               d="M16 27 L28 15 L40 27"
               fill="none"
-              stroke="#1E7FE0"
+              stroke="#386FCB"
               stroke-width="4"
               stroke-linecap="round"
               stroke-linejoin="round"

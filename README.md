@@ -50,18 +50,26 @@ this whole scheme with a single `SITE_CONFIG.bookingUrl` and drop the
 
 Anything wrapped in `<span class="todo">…</span>` is pending real information and
 renders with a gold dashed underline so nothing ships by accident. Find them all with
-a project-wide search for `class="todo"`. Current TODOs:
+a project-wide search for `class="todo"`. Remaining TODOs (address, phone, hours,
+rates, careers email, and the Maps embed are done):
 
-- [ ] Street address + postal code (footer on all pages, contact.html, JSON-LD in index.html)
-- [ ] Phone + email (footer on all pages, contact.html, first-visit.html FAQ, JSON-LD)
-- [ ] Hours (footer on all pages, contact.html)
-- [ ] RMT + ND rates (services.html)
-- [ ] Direct-billing wording (services.html, first-visit.html)
-- [ ] Headshots for Bram, Janelle, and Dr. Burkitt (team.html — bios/booking links are real)
-- [ ] Careers email (team.html hiring panel)
-- [ ] Parking + accessibility details (contact.html)
-- [ ] Contact form endpoint (contact.html — wire to Formspree/Netlify Forms/backend)
-- [ ] Google Maps embed (contact.html — instructions in comment)
+- [ ] Headshots for Bram, Janelle, and Dr. Burkitt (team.html — placeholder boxes are
+      commented out until real photos arrive; search `HEADSHOT PENDING`)
+- [ ] Contact form endpoint (contact.html — wire to Formspree/Netlify Forms/backend,
+      or hide the form; right now submitting does nothing)
+- [ ] Founder photo slot on about.html (still shows a grey `.img-placeholder` box)
+- [ ] Weekend hours ("Coming soon" in footer/contact once confirmed)
+
+## Temporarily hidden before launch
+
+- **Registered Psychotherapy** — commented out on index.html (services card) and
+  services.html (full section); it's listed under "Coming Soon" / "Growing with
+  you" instead. Search `TEMPORARILY HIDDEN` for restore instructions. Note the
+  section backgrounds on services.html were re-alternated (naturopathic → bone,
+  Growing with you → white); flip them back when psychotherapy returns.
+- **Team headshot placeholders** — the grey avatar boxes on team.html are
+  commented out (search `HEADSHOT PENDING`) so cards ship text-only until real
+  photos arrive.
 
 ## Image slots
 
@@ -90,6 +98,10 @@ to replace any of them.
 
 ## Design tokens
 
-All colors/fonts/spacing live as CSS custom properties at the top of `css/styles.css`
-(Peak Blue `#1E7FE0`, Summit Navy `#12314F`, Bone `#F5F2EB`, Charcoal `#2A2C2E`,
-Glacier `#E3EDF7`, Ridge Gold `#C9A253`; Archivo Expanded display / Source Sans 3 body).
+All colors/fonts/spacing live as CSS custom properties at the top of `css/styles.css`.
+The palette was re-tuned in July 2026 to match the updated logo (icon blue `#386FCB`,
+wordmark near-navy `#06091A`): Peak Blue `#386FCB`, Peak Blue Dark `#2A55A3`,
+Summit Navy `#152A52`, Navy Deep `#0B1734`, Bone `#F5F2EB`, Charcoal `#2A2C2E`,
+Glacier `#E4EAF8`, Ridge Gold `#C9A253` (legacy accent — the new logo has no gold;
+kept as the warm secondary for the ribbon, focus rings, and nav underline).
+Archivo Expanded display / Source Sans 3 body.

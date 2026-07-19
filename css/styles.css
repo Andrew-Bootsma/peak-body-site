@@ -1,22 +1,24 @@
 /* ==========================================================================
    PEAK BODY PERFORMANCE — styles.css
-   Design system per proposal v2:
-   Peak Blue #1E7FE0 · Summit Navy #12314F · Bone #F5F2EB
-   Charcoal Ink #2A2C2E · Glacier #E3EDF7 · Ridge Gold #C9A253
+   Design system per proposal v2, palette re-tuned July 2026 to match the
+   updated logo (icon blue #386FCB, wordmark near-navy #06091A):
+   Peak Blue #386FCB · Peak Blue Dark #2A55A3 · Summit Navy #152A52
+   Navy Deep #0B1734 · Bone #F5F2EB · Charcoal Ink #2A2C2E
+   Glacier #E4EAF8 · Ridge Gold #C9A253 (legacy accent, not in the new logo)
    Display: Archivo (Expanded via font-stretch) · Body: Source Sans 3
    Signature motif: the "elevation line" (double-chevron divider)
    ========================================================================== */
 
 /* ---------- 1. Tokens ---------- */
 :root {
-  --peak-blue: #1e7fe0;
-  --peak-blue-dark: #1565ba;
-  --summit-navy: #12314f;
-  --navy-deep: #0c2238;
+  --peak-blue: #386fcb;
+  --peak-blue-dark: #2a55a3;
+  --summit-navy: #152a52;
+  --navy-deep: #0b1734;
   --bone: #f5f2eb;
   --ink: #2a2c2e;
-  --glacier: #e3edf7;
-  --glacier-border: #cfdeed;
+  --glacier: #e4eaf8;
+  --glacier-border: #ccd9ef;
   --ridge-gold: #c9a253;
   --white: #ffffff;
 
@@ -26,7 +28,7 @@
   --container: 1140px;
   --radius: 8px;
   --shadow-whisper:
-    0 1px 2px rgba(18, 49, 79, 0.06), 0 4px 14px rgba(18, 49, 79, 0.05);
+    0 1px 2px rgba(21, 42, 82, 0.06), 0 4px 14px rgba(21, 42, 82, 0.05);
 }
 
 /* ---------- 2. Base ---------- */
@@ -93,13 +95,15 @@ p:last-child {
   margin-bottom: 0;
 }
 
+/* Body links sit one step darker than the brand blue so they clear WCAG AA
+   (4.5:1) on the bone and glacier tinted backgrounds, not just on white. */
 a {
-  color: var(--peak-blue);
+  color: var(--peak-blue-dark);
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
 }
 a:hover {
-  color: var(--peak-blue-dark);
+  color: var(--summit-navy);
 }
 
 :focus-visible {
@@ -278,7 +282,7 @@ a:hover {
 .peak-list li {
   padding-left: 1.9rem;
   margin-bottom: 0.55rem;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M3 13 L12 4 L21 13' fill='none' stroke='%231E7FE0' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 16'%3E%3Cpath d='M3 13 L12 4 L21 13' fill='none' stroke='%23386FCB' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
     no-repeat left 0.42em / 1.05rem auto;
 }
 
@@ -416,9 +420,9 @@ a:hover {
   background:
     linear-gradient(
       100deg,
-      rgba(12, 34, 56, 0.92) 0%,
-      rgba(18, 49, 79, 0.82) 45%,
-      rgba(18, 49, 79, 0.55) 100%
+      rgba(11, 23, 52, 0.92) 0%,
+      rgba(21, 42, 82, 0.82) 45%,
+      rgba(21, 42, 82, 0.55) 100%
     ),
     var(--summit-navy)
       url("https://images.pexels.com/photos/841131/pexels-photo-841131.jpeg?auto=compress&cs=tinysrgb&w=1920")
@@ -785,7 +789,7 @@ a:hover {
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--peak-blue);
-  box-shadow: 0 0 0 3px rgba(30, 127, 224, 0.18);
+  box-shadow: 0 0 0 3px rgba(56, 111, 203, 0.18);
 }
 .form-note {
   font-size: 0.95rem;
@@ -800,7 +804,7 @@ a:hover {
   border-radius: var(--radius);
   overflow: hidden;
   min-height: 380px;
-  box-shadow: 0 4px 18px rgba(18, 49, 79, 0.12);
+  box-shadow: 0 4px 18px rgba(21, 42, 82, 0.12);
 }
 .map-embed iframe {
   display: block;
