@@ -795,6 +795,13 @@ a:hover {
   font-size: 0.95rem;
   color: var(--summit-navy);
 }
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
 
 .map-placeholder {
   min-height: 380px;
