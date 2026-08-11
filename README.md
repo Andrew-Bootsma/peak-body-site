@@ -62,11 +62,6 @@ rates, careers email, and the Maps embed are done):
 
 ## Temporarily hidden before launch
 
-- **Registered Psychotherapy** — commented out on index.html (services card) and
-  services.html (full section); it's listed under "Coming Soon" / "Growing with
-  you" instead. Search `TEMPORARILY HIDDEN` for restore instructions. Note the
-  section backgrounds on services.html were re-alternated (naturopathic → bone,
-  Growing with you → white); flip them back when psychotherapy returns.
 - **Team headshot placeholders** — the grey avatar boxes on team.html are
   commented out (search `HEADSHOT PENDING`) so cards ship text-only until real
   photos arrive.
