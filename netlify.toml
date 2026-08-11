@@ -1,0 +1,8 @@
+[build]
+  publish = "."   # set this to match your current Netlify "Publish directory"
+
+[context.branch-deploy]
+  command = 'printf "/*\n  X-Robots-Tag: noindex\n" > _headers && printf "User-agent: *\nDisallow: /\n" > robots.txt'
+
+[context.deploy-preview]
+  command = 'printf "/*\n  X-Robots-Tag: noindex\n" > _headers && printf "User-agent: *\nDisallow: /\n" > robots.txt'
