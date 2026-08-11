@@ -29,7 +29,7 @@ looked fine on desktop but blurred badly on iPhone. Stick with flat PNGs for thi
 logo unless a true path-based vector (from the designer's source file, e.g. AI/EPS/Figma)
 becomes available.
 
-## Booking links (three practitioners, three platforms — for now)
+## Booking links (four practitioners, three platforms — for now)
 
 Every booking button/link carries `data-book`. `js/main.js` handles two cases:
 
@@ -38,10 +38,10 @@ Every booking button/link carries `data-book`. `js/main.js` handles two cases:
   visitor picks a practitioner and clicks that person's own booking link.
 - Practitioner-specific buttons (team.html cards, services.html "Book with
   Dr. Burkitt") add `data-book-url="…"` pointing straight at that
-  practitioner's booking platform (ClinicSense for Bram, Jane App for Janelle
-  and Dr. Burkitt).
+  practitioner's booking platform (ClinicSense for Bram and Brooklyn, Jane App
+  for Janelle and Dr. Burkitt).
 
-`SITE_CONFIG.practitioners` in `js/main.js` is a reference list of the three
+`SITE_CONFIG.practitioners` in `js/main.js` is a reference list of the four
 current URLs. When the clinic centralizes booking onto one platform, replace
 this whole scheme with a single `SITE_CONFIG.bookingUrl` and drop the
 `data-book-url` overrides.
@@ -54,7 +54,8 @@ a project-wide search for `class="todo"`. Remaining TODOs (address, phone, hours
 rates, careers email, and the Maps embed are done):
 
 - [ ] Headshots for Bram, Janelle, and Dr. Burkitt (team.html — placeholder boxes are
-      commented out until real photos arrive; search `HEADSHOT PENDING`)
+      commented out until real photos arrive; Brooklyn currently ships without a
+      placeholder block)
 - [ ] Contact form endpoint (contact.html — wire to Formspree/Netlify Forms/backend,
       or hide the form; right now submitting does nothing)
 - [ ] Founder photo slot on about.html (still shows a grey `.img-placeholder` box)
@@ -80,8 +81,8 @@ to replace any of them.
 
 ## Launch-day switches
 
-1. Booking URLs for all three practitioners are already live in `js/main.js` and
-   `team.html`. Add a fourth practitioner? Give their button `data-book-url="…"`
+1. Booking URLs for all four practitioners are already live in `js/main.js` and
+   `team.html`. Add a fifth practitioner? Give their button `data-book-url="…"`
    and add them to `SITE_CONFIG.practitioners` for reference.
 2. Change the ribbon text (all pages) from "Opening August 2026…" to whatever suits
    opening week — or delete the `<div class="ribbon">` entirely.

@@ -4,8 +4,8 @@
 
 /* --------------------------------------------------------------------------
    SITE CONFIG — the one-line changes.
-   We currently have three practitioners, each on their own booking platform
-   (no centralized booking yet). Generic "Book Now" links (no specific
+  We currently have four practitioners across three booking platforms
+  (no centralized booking yet). Generic "Book Now" links (no specific
    practitioner in context) send people to the Our Team page so they can pick
    a practitioner and use that person's booking link. Any link tagged with
    data-book-url="..." goes straight to that practitioner's own booking page.
@@ -15,6 +15,7 @@
 const SITE_CONFIG = {
   practitioners: {
     bram: "https://bramvanbommelrmt.clinicsense.com/book/",
+    brooklyn: "https://bramvanbommelrmt.clinicsense.com/book/",
     janelle: "https://lotusmassagewellness.janeapp.com/",
     rhiannon: "https://burkittnaturopathic.janeapp.com/#/staff_member/1",
   },
