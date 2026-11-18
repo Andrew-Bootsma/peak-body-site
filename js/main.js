@@ -4,7 +4,7 @@
 
 /* --------------------------------------------------------------------------
    SITE CONFIG — the one-line changes.
-   We currently have five practitioners across three booking platforms
+   We currently have six practitioners across three booking platforms
   (no centralized booking yet). Generic "Book Now" links (no specific
    practitioner in context) send people to the Our Team page so they can pick
    a practitioner and use that person's booking link. Any link tagged with
@@ -17,6 +17,7 @@ const SITE_CONFIG = {
     bram: "https://bramvanbommelrmt.clinicsense.com/book/",
     brooklyn: "https://bramvanbommelrmt.clinicsense.com/book/",
     braedan: "https://bramvanbommelrmt.clinicsense.com/book/",
+    katelyn: "https://bramvanbommelrmt.clinicsense.com/book/",
     janelle: "https://lotusmassagewellness.janeapp.com/",
     rhiannon: "https://burkittnaturopathic.janeapp.com/#/staff_member/1",
   },
